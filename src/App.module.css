@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    --dark-blue: hsl(218, 23%, 16%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background: var(--dark-blue);
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+}
+
+.adviceContainer {
+    background-color: var(--dark-grayish-blue);
+    width: 50%;
+    height: 40vh;
+    border-radius: 25px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    position: relative;
+}
+
+.adviceContainer .adviceNumber {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 1rem;
+}
+
+.adviceContainer .adviceText {
+    color: white;
+    text-align: center;
+}
+
+.adviceContainer .separator {
+    background: url("./assets/images/pattern-divider-desktop.svg") no-repeat center;
+    height: 2rem;
+    width: 100%;
+}
+
+.adviceContainer .adviceGenerator {
+    width: 80px;
+    height: 80px;
+    background-color: var(--neon-green);
+    position: absolute;
+    bottom: -30px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    background-image: url("./assets/images/icon-dice.svg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center;
+}
+
+.adviceContainer .adviceGenerator:hover {
+    box-shadow: 0 0 50px 10px var(--neon-green);
+}
+
+.adviceContainer .adviceGenerator img {
+    width: 50%;
+}
